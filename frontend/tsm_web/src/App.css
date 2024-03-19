@@ -1,0 +1,28 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.match-card {
+    height: 15vh;
+    width: 90vw;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.match-team {
+    text-align: center;
+}
+
+.score-away {
+    text-align: right;
+}
+
+.score-home {
+    text-align: left;
+}
+
+.time {
+    justify-content: center;
+}
+
