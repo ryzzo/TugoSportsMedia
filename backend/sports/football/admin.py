@@ -7,10 +7,10 @@ class TeamsAdmin(admin.ModelAdmin):
 
 @admin.register(MatchGame)
 class MatchesAdmin(admin.ModelAdmin):
-    list_display = ('home_team', 'home_team_scores',
+    list_display = ('match_id','home_team', 'home_team_scores',
                     'away_team', 'away_team_scores',
-                    'date', 'time', 'stadium')
-    list_filter = ('date', 'time')
+                    'date', 'time', 'stadium', 'played')
+    #list_filter = ('date', 'time')
 
 @admin.register(Stat)
 class StatsAdmin(admin.ModelAdmin):

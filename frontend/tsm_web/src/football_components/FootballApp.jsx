@@ -127,6 +127,35 @@ const match_schedule_data = [
         away_team_score: null,
     },
     
+];
+
+const stat = [
+    {
+        team: 'Gor',
+        matches_played : 12,
+        matches_won: 6,
+        matches_lost: 8,
+        matches_drawn: 2,
+        goal_difference: 5,
+    },
+    {
+        team: 'Arsenal',
+        matches_played : 12,
+        matches_won: 5,
+        matches_lost: 8,
+        matches_drawn: 4,
+        goal_difference: 5,
+    },
+    {
+        team: 'Manchester',
+        matches_played : 12,
+        matches_won: 4,
+        matches_lost: 8,
+        matches_drawn: 7,
+        goal_difference: 5,
+    },
+
+
 ]
 
 const FootballApp = () => {
