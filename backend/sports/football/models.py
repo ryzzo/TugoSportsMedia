@@ -1,6 +1,7 @@
 from django.db import models
 
 class Team(models.Model):
+    logo = models.ImageField(null=True, blank=True)
     name = models.CharField(max_length=100)
     coach = models.CharField(max_length=100)
 
