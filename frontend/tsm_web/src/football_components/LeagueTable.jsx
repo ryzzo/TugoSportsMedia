@@ -13,13 +13,16 @@ const LeagueTable = ({league_data}) => {
                         <th>W</th>
                         <th>D</th>
                         <th>L</th>
+                        <th>GF</th>
+                        <th>GA</th>
+                        <th>GD</th>
                         <th>pts</th>
                     </tr>
                 </thead>
                 <tbody>
                 <tr>
             <td>1</td>
-            <td>Manchester United</td>
+            <td><img src="#"/>Manchester United</td>
             <td>5</td>
             <td>2</td>
             <td>2</td>
@@ -27,7 +30,7 @@ const LeagueTable = ({league_data}) => {
           </tr>
           <tr>
             <td>2</td>
-            <td>Manchester City</td>
+            <td><img src="#"/>Manchester City</td>
             <td>5</td>
             <td>5</td>
             <td>3</td>
@@ -35,7 +38,7 @@ const LeagueTable = ({league_data}) => {
           </tr>
           <tr>
             <td>3</td>
-            <td>Chelsea FC</td>
+            <td><img src="#"/>Chelsea FC</td>
             <td>5</td>
             <td>5</td>
             <td>3</td>

@@ -1,9 +1,11 @@
 import React from "react";
 import Taskbar from "./Taskbar";
 import Content from "./Content";
+import logo from "./images/city_stars.jpg"
 
 const league_data = [
     {
+        logo: logo,
         team: 'Gor',
         matches_played: 5,
         matches_won: 3,
@@ -11,6 +13,7 @@ const league_data = [
         matches_lost: 2
     },
     {
+        logo: logo,
         team: 'Arsenal',
         matches_played: 4,
         matches_won: 2,
@@ -18,6 +21,7 @@ const league_data = [
         matches_lost: 3
     },
     {
+        logo: logo,
         team: 'Liverpool',
         matches_played: 3,
         matches_won: 1,
@@ -28,6 +32,7 @@ const league_data = [
 
 const match_schedule_data = [
     {
+        logo: logo,
         match_id: 1,
         date: '2023-08-01',
         time: '13:00',
@@ -37,6 +42,7 @@ const match_schedule_data = [
         away_team_score: 0
     },
     {
+        logo: logo,
         match_id: 2,
         date: '2023-08-01',
         time: '13:00',
@@ -46,6 +52,7 @@ const match_schedule_data = [
         away_team_score: 1
     },
     {
+        logo: logo,
         match_id: 3,
         date: '2023-08-01',
         time: '16:00',
@@ -55,6 +62,7 @@ const match_schedule_data = [
         away_team_score: null
     },
     {
+        logo: logo,
         match_id: 4,
         date: '2023-09-01',
         time: '13:00',
@@ -64,6 +72,7 @@ const match_schedule_data = [
         away_team_score: null,
     },
     {
+        logo: logo,
         match_id: 4,
         date: '2023-09-01',
         time: '13:00',
@@ -73,6 +82,7 @@ const match_schedule_data = [
         away_team_score: null,
     },
     {
+        logo: logo,
         match_id: 4,
         date: '2023-09-01',
         time: '13:00',
@@ -82,6 +92,7 @@ const match_schedule_data = [
         away_team_score: null,
     },
     {
+        logo: logo,
         match_id: 4,
         date: '2023-10-04',
         time: '13:00',
@@ -91,6 +102,7 @@ const match_schedule_data = [
         away_team_score: null,
     },
     {
+        logo: logo,
         match_id: 4,
         date: '2023-10-04',
         time: '13:00',
@@ -100,6 +112,7 @@ const match_schedule_data = [
         away_team_score: null,
     },
     {
+        logo: logo,
         match_id: 4,
         date: '2023-10-04',
         time: '13:00',
@@ -109,6 +122,7 @@ const match_schedule_data = [
         away_team_score: null,
     },
     {
+        logo: logo,
         match_id: 4,
         date: '2023-10-04',
         time: '16:00',
@@ -118,6 +132,7 @@ const match_schedule_data = [
         away_team_score: null,
     },
     {
+        logo: logo,
         match_id: 4,
         date: '2023-10-04',
         time: '16:00',
@@ -131,6 +146,7 @@ const match_schedule_data = [
 
 const stat = [
     {
+        logo: logo,
         team: 'Gor',
         matches_played : 12,
         matches_won: 6,
@@ -139,6 +155,7 @@ const stat = [
         goal_difference: 5,
     },
     {
+        logo: logo,
         team: 'Arsenal',
         matches_played : 12,
         matches_won: 5,
@@ -147,6 +164,7 @@ const stat = [
         goal_difference: 5,
     },
     {
+        logo: logo,
         team: 'Manchester',
         matches_played : 12,
         matches_won: 4,
