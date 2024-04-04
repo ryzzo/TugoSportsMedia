@@ -1,14 +1,16 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
-
 import { 
     BrowserRouter as Router,
     Routes,
     Route,
-    Link, 
+    Link,
+    useParams,
 } from "react-router-dom";
+
 
 import MatchSchedule from "./MatchSchedule";
 import LeagueTable from "./LeagueTable";

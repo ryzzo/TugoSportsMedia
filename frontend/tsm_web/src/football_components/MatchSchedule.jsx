@@ -25,8 +25,10 @@ const MatchSchedule = () => {
         matchesDates();
     }, []);
 
-
     function matchesDates() {
+        /*
+        function that returns all the match dates
+        */
         const dates = matchSchedule.map((match) => 
         match.date
         )
@@ -34,6 +36,9 @@ const MatchSchedule = () => {
     }
     
     const groupedDate = matchSchedule.reduce((group, item) => {
+        /*
+        function that groups matches with similar match dates
+        */
         const { date } = item;
         if (!group[date]) {
             group[date] = [];

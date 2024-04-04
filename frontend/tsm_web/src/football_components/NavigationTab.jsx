@@ -1,11 +1,11 @@
 import React from "react";
 import Container from 'react-bootstrap/Container';
 
-const NavigationTab = ({league_data, match_schedule_data}) => {
+const NavigationTab = () => {
     
     return (
         <Container>
-            <div>Hello</div>
+            <div>Implement a navigation tab</div>
         </Container>
         
     )

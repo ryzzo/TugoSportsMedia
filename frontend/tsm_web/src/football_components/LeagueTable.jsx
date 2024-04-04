@@ -10,7 +10,6 @@ const LeagueTable = () => {
     const stat_url = "http://localhost:8000/football/stats/";
     
     const [team_stats, setTeamStats] = useState([]);
-    const index = 0
 
     const fetchStatData = async() => {
         return await axios.get(stat_url)
