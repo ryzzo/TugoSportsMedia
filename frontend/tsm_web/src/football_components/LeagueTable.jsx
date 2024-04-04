@@ -1,14 +1,36 @@
-import React from "react";
+import React, { useState, useEffect} from "react";
 import Table from "react-bootstrap/Table"
+import axios from "axios";
 
-const LeagueTable = ({league_data}) => {
-    console.log(league_data)
+import TeamStat from "./TeamStat";
+
+const LeagueTable = () => {
+
+
+    const stat_url = "http://localhost:8000/football/stats/";
+    
+    const [team_stats, setTeamStats] = useState([]);
+    const index = 0
+
+    const fetchStatData = async() => {
+        return await axios.get(stat_url)
+            .then((response) =>
+            {
+                setTeamStats(response.data);
+            })
+    };
+
+    useEffect(() => {
+        fetchStatData()
+    }, []);
+    
     return (
         <div>
             <Table>
                 <thead>
                     <tr>
                         <th>#</th>
+                        <th></th>
                         <th>MP</th>
                         <th>W</th>
                         <th>D</th>
@@ -20,30 +42,9 @@ const LeagueTable = ({league_data}) => {
                     </tr>
                 </thead>
                 <tbody>
-                <tr>
-            <td>1</td>
-            <td><img src="#"/>Manchester United</td>
-            <td>5</td>
-            <td>2</td>
-            <td>2</td>
-            <td>52</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td><img src="#"/>Manchester City</td>
-            <td>5</td>
-            <td>5</td>
-            <td>3</td>
-            <td>52</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td><img src="#"/>Chelsea FC</td>
-            <td>5</td>
-            <td>5</td>
-            <td>3</td>
-            <td>45</td>
-          </tr>
+                    {team_stats.map((team_stat, index) =>
+                        <TeamStat key={index} team_stat={team_stat} count={index + 1}/>
+                    )}
                 </tbody>
             </Table>
         </div>

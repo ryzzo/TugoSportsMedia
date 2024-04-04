@@ -13,13 +13,16 @@ class MatchGameSerializer(serializers.ModelSerializer):
         model = MatchGame
         fields = ['home_team', 'home_team_scores',
                   'away_team', 'away_team_scores',
-                  'date', 'time']
+                  'date', 'time', 'played']
 
 class StatSerializer(serializers.ModelSerializer):
-    team_name = serializers.ReadOnlyField(source='team.name')
+    #team_name = serializers.ReadOnlyField(source='team.name')
+    team = TeamSerializer(read_only=True)
     class Meta:
         model = Stat
-        fields = ['team_name',
+        fields = ['team',
                   'matches_played', 'matches_won',
-                  'matches_lost', 'matches_drawn']
+                  'matches_lost', 'matches_drawn',
+                  'goals_for', 'goals_against',
+                  'goal_difference', 'points']
         

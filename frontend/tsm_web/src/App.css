@@ -1,6 +1,12 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+.company-image {
+    width: 100%;
+}
+
+.team-logo {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
 
 .match-card {
     height: 15vh;

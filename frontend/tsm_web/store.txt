@@ -1,17 +1,18 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from "react-bootstrap/Container";
 import ListGroup from "react-bootstrap/ListGroup";
 import axios from "axios";
 
+import getNearestDate from "./backend/dateView";
+
+
 import Match from "./Match";
-// import getNearestDate from "./backend/dateView";
 
 const MatchSchedule = () => {
 
     const [matchSchedule, setMatchSchedule] = useState([]);
     const [date, setDate] = useState('')
-    const [dateData, setDateData] = useState('')
     const ref = useRef(null)
 
     const league_url = "http://localhost:8000/football/match_games/";
@@ -22,17 +23,9 @@ const MatchSchedule = () => {
             setMatchSchedule(response.data);
         }
         getMatches();
-        matchesDates();
+        setDate('2024-05-12');
     }, []);
 
-
-    function matchesDates() {
-        const dates = matchSchedule.map((match) => 
-        match.date
-        )
-        return dates;
-    }
-    
     const groupedDate = matchSchedule.reduce((group, item) => {
         const { date } = item;
         if (!group[date]) {
@@ -43,25 +36,18 @@ const MatchSchedule = () => {
     }, {});
 
     const handleChangeValue = () =>{
-        /* 
-        function to scroll the view to current
-        matches
-        */
-        if (ref.current){
-            ref.current.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start',
-                inline: 'nearest',
-            });
-        }
+        ref.current.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest',
+        });
     }
 
     const data = Object.entries(groupedDate);
 
-    handleChangeValue();
-
     return(
         <Container>
+            <button>LATEST</button>
             {data.map(([category, items]) => (
                 <div onLoad={handleChangeValue()} key={category} ref={category === date ? ref : null}>
                    <div>{category}</div>

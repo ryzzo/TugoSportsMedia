@@ -12,22 +12,32 @@ import {
 
 import MatchSchedule from "./MatchSchedule";
 import LeagueTable from "./LeagueTable";
+import TitleBar from "./TitleBar";
 
-const Content = ({league_data, match_schedule_data}) => {
-    console.log(league_data)
+const Content = () => {
+    
     return (
         <Router>
+            <TitleBar />
             <Navbar bg="light" data-bs-theme="light">
                 <Container>
                     <Nav className="me-auto">
-                        <Nav.Link href="/matches">Matches</Nav.Link>
-                        <Nav.Link href="/league-table">Table</Nav.Link>
+                        <Nav.Link>
+                            <Link to="/" style={{textDecoration:'inherit', color:'inherit'}}>
+                                Matches
+                            </Link>
+                        </Nav.Link>
+                        <Nav.Link>
+                            <Link to="/league-table" style={{textDecoration:'inherit', color:'inherit'}}>
+                                Table
+                            </Link>
+                        </Nav.Link>
                     </Nav>
                     </Container>
             </Navbar>
             <Routes>
-                <Route path="matches" element={<MatchSchedule match_schedule_data={match_schedule_data}/>}/>
-                <Route path="league-table" element={<LeagueTable league_data={league_data}/>}/>
+                <Route path="" Component={MatchSchedule}/>
+                <Route path="league-table" Component={LeagueTable}/>
             </Routes>
         </Router>
     )
